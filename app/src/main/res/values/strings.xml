@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Absensi</string>
+    <string name="hello_sign_in_please">Hello, Sign In Please</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
 </resources>
