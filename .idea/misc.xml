@@ -10,6 +10,10 @@
         <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/bg_edit_text.xml" value="0.20498783454987834" />
+        <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/fragment_attendance.xml" value="0.1" />
+        <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/fragment_history.xml" value="0.1" />
+        <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/layout/fragment_person.xml" value="0.1" />
+        <entry key="..\:/Users/maded/AndroidStudioProjects/Absensi/app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
