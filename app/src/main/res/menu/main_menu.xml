@@ -6,6 +6,7 @@
         android:id="@+id/action_history"
         android:title="@string/history"
         android:icon="@drawable/ic_baseline_history_24"
+        android:iconTint="@null"
         app:showAsAction="always"/>
 
     <item
