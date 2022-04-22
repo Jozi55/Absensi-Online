@@ -1,4 +1,4 @@
-package com.example.absensi.attendance
+package com.example.absensi.view.attendance
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.absensi.R
+import com.example.absensi.databinding.FragmentAttendanceBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -19,11 +20,15 @@ class AttendanceFragment : Fragment(), OnMapReadyCallback {
 
     private var mapAttendance : SupportMapFragment? = null
     private var map: GoogleMap? =null
+    private var binding: FragmentAttendanceBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? =  inflater.inflate(R.layout.fragment_attendance, container, false)
+    ): View? {
+        binding = FragmentAttendanceBinding.inflate(inflater, container, false)
+        return binding?.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,7 +42,7 @@ class AttendanceFragment : Fragment(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         map =googleMap
-        val sydney = LatLng(-33.852, 151.211)
+        val sydney = LatLng(-8.208159048111535, 114.93537165498887)
         map?.addMarker(
             MarkerOptions()
                 .position(sydney)
@@ -47,5 +52,9 @@ class AttendanceFragment : Fragment(), OnMapReadyCallback {
         map?.animateCamera(CameraUpdateFactory.zoomTo(20f))
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.absensi.changepass
+package com.example.absensi.view.changepass
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
