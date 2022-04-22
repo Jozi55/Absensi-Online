@@ -1,13 +1,13 @@
-package com.example.absensi.main
+package com.example.absensi.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.absensi.R
-import com.example.absensi.attendance.AttendanceFragment
+import com.example.absensi.view.attendance.AttendanceFragment
 import com.example.absensi.databinding.ActivityMainBinding
-import com.example.absensi.history.HistoryFragment
-import com.example.absensi.person.PersonFragment
+import com.example.absensi.view.history.HistoryFragment
+import com.example.absensi.view.person.PersonFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,19 +26,19 @@ class MainActivity : AppCompatActivity() {
             when(item.itemId){
                 R.id.action_history -> {
                     openFragment(HistoryFragment())
-                    true
+                    return@setOnItemSelectedListener true
                 }
                 R.id.action_attendance -> {
                     openFragment(AttendanceFragment())
-                    true
+                    return@setOnItemSelectedListener true
                 }
                 R.id.action_profile -> {
                     openFragment(PersonFragment())
-                    true
+                    return@setOnItemSelectedListener true
                 }
 
             }
-        false
+        return@setOnItemSelectedListener false
         }
         openHomeFragment()
     }
