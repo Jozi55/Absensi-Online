@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.absensi">
-    <!--    mendapatkan lokasi menggunakan WIFI atau mobile data-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!--    mendapatkan lokasi menggunakan GPS-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!--    untuk mengirimkan data ke firebase-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- mendapatkan lokasi menggunakan WIFI atau mobile data -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- mendapatkan lokasi menggunakan GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- untuk mengirimkan data ke firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
         <activity
             android:name=".forgotpass.ForgotPasswordActivity"
             android:exported="false" />
@@ -38,17 +38,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
     </application>
 
 </manifest>
